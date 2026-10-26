@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8088
 
 spring:
   application:
@@ -10,7 +10,7 @@ spring:
         - id: customer-service-route
           uri: lb://customer-service
           predicates:
-            - Path=/api/v1/customers/**
+            - Path=/api/v1/auth/**
 
 eureka:
   client:
